@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on win32)" generated="20200601 00:40:15.226" rpa="false">
+<suite id="s1" name="Olybet" source="C:\dev\robot\Olybet\tests\olybet.robot">
+<test id="s1-t1" name="User should be able to login to page">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:15.412" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200601 00:40:15.412" endtime="20200601 00:40:18.601"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:15.411" endtime="20200601 00:40:18.601"></status>
+</kw>
+<kw name="Log into user account page" library="OlybetApp">
+<kw name="Load" library="LoginPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:18.603" level="INFO">Opening url 'https://www.olybet.lt/user/profile'</msg>
+<status status="PASS" starttime="20200601 00:40:18.603" endtime="20200601 00:40:20.059"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:18.602" endtime="20200601 00:40:20.059"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LoginPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Login with username</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:20.059" endtime="20200601 00:40:20.139"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:20.059" endtime="20200601 00:40:20.139"></status>
+</kw>
+<kw name="Login" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>user_login_username</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:20.140" level="INFO">Typing text 'lauzhikas@gmail.com' into text field 'user_login_username'.</msg>
+<status status="PASS" starttime="20200601 00:40:20.139" endtime="20200601 00:40:20.902"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>user_login_password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:20.902" level="INFO">Typing password into text field 'user_login_password'.</msg>
+<msg timestamp="20200601 00:40:20.952" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200601 00:40:21.144" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200601 00:40:20.902" endtime="20200601 00:40:21.144"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:21.144" level="INFO">Clicking button 'css=#form-login &gt; div:nth-child(2) &gt; button'.</msg>
+<status status="PASS" starttime="20200601 00:40:21.144" endtime="20200601 00:40:21.379"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:20.139" endtime="20200601 00:40:21.379"></status>
+</kw>
+<kw name="Verify Page Loaded" library="User">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contract № ${ACCOUNT}</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:21.380" endtime="20200601 00:40:23.049"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:21.380" endtime="20200601 00:40:23.049"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:18.602" endtime="20200601 00:40:23.049"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200601 00:40:23.050" endtime="20200601 00:40:25.175"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:23.050" endtime="20200601 00:40:25.176"></status>
+</kw>
+<doc>This is checking if the user can login into his account page</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200601 00:40:15.411" endtime="20200601 00:40:25.177" critical="yes"></status>
+</test>
+<test id="s1-t2" name="User should be able to change contact information">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:25.187" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200601 00:40:25.186" endtime="20200601 00:40:28.290"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:25.185" endtime="20200601 00:40:28.290"></status>
+</kw>
+<kw name="Log into user account page" library="OlybetApp">
+<kw name="Load" library="LoginPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:28.292" level="INFO">Opening url 'https://www.olybet.lt/user/profile'</msg>
+<status status="PASS" starttime="20200601 00:40:28.291" endtime="20200601 00:40:29.901"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:28.291" endtime="20200601 00:40:29.901"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LoginPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Login with username</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:29.902" endtime="20200601 00:40:30.179"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:29.901" endtime="20200601 00:40:30.179"></status>
+</kw>
+<kw name="Login" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>user_login_username</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:30.179" level="INFO">Typing text 'lauzhikas@gmail.com' into text field 'user_login_username'.</msg>
+<status status="PASS" starttime="20200601 00:40:30.179" endtime="20200601 00:40:30.773"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>user_login_password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:30.774" level="INFO">Typing password into text field 'user_login_password'.</msg>
+<msg timestamp="20200601 00:40:30.839" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200601 00:40:31.068" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200601 00:40:30.773" endtime="20200601 00:40:31.068"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:31.068" level="INFO">Clicking button 'css=#form-login &gt; div:nth-child(2) &gt; button'.</msg>
+<status status="PASS" starttime="20200601 00:40:31.068" endtime="20200601 00:40:31.151"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:30.179" endtime="20200601 00:40:31.152"></status>
+</kw>
+<kw name="Verify Page Loaded" library="User">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contract № ${ACCOUNT}</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:31.152" endtime="20200601 00:40:32.944"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:31.152" endtime="20200601 00:40:32.944"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:28.290" endtime="20200601 00:40:32.945"></status>
+</kw>
+<kw name="Change Contact Information" library="OlybetApp">
+<kw name="Change Contact Information" library="User">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD_CITY}</arg>
+<arg>${CITY}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:32.946" level="INFO">Typing text 'Vilnius' into text field 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(5) &gt; div &gt; input'.</msg>
+<status status="PASS" starttime="20200601 00:40:32.945" endtime="20200601 00:40:33.215"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD_RESIDENTIAL_ADDRESS}</arg>
+<arg>${RESIDENTIAL_ADDRESS}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:33.215" level="INFO">Typing text 'Gedimino pr. 9' into text field 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(4) &gt; div &gt; input'.</msg>
+<status status="PASS" starttime="20200601 00:40:33.215" endtime="20200601 00:40:33.385"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:32.945" endtime="20200601 00:40:33.385"></status>
+</kw>
+<kw name="Save" library="User">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(7) &gt; div &gt; button</arg>
+</arguments>
+<msg timestamp="20200601 00:40:33.386" level="INFO">Clicking button 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(7) &gt; div &gt; button'.</msg>
+<status status="PASS" starttime="20200601 00:40:33.385" endtime="20200601 00:40:33.491"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:33.385" endtime="20200601 00:40:33.491"></status>
+</kw>
+<kw name="Verify Contact Information" library="User">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.493" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200601 00:40:33.492" endtime="20200601 00:40:36.493"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${INPUT_FIELD_CITY}</arg>
+<arg>value</arg>
+<arg>${CITY}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.529" level="INFO">Element 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(5) &gt; div &gt; input' attribute 'value' contains value 'Vilnius'.</msg>
+<status status="PASS" starttime="20200601 00:40:36.493" endtime="20200601 00:40:36.529"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${INPUT_FIELD_RESIDENTIAL_ADDRESS}</arg>
+<arg>value</arg>
+<arg>${RESIDENTIAL_ADDRESS}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.540" level="INFO">Element 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(4) &gt; div &gt; input' attribute 'value' contains value 'Gedimino pr. 9'.</msg>
+<status status="PASS" starttime="20200601 00:40:36.529" endtime="20200601 00:40:36.540"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:33.492" endtime="20200601 00:40:36.540"></status>
+</kw>
+<kw name="Clear Contact Information" library="User">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD_CITY}</arg>
+<arg>n/a</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.540" level="INFO">Typing text 'n/a' into text field 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(5) &gt; div &gt; input'.</msg>
+<status status="PASS" starttime="20200601 00:40:36.540" endtime="20200601 00:40:36.625"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${INPUT_FIELD_RESIDENTIAL_ADDRESS}</arg>
+<arg>n/a</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.625" level="INFO">Typing text 'n/a' into text field 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(4) &gt; div &gt; input'.</msg>
+<status status="PASS" starttime="20200601 00:40:36.625" endtime="20200601 00:40:36.707"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:36.540" endtime="20200601 00:40:36.708"></status>
+</kw>
+<kw name="Save" library="User">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(7) &gt; div &gt; button</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.708" level="INFO">Clicking button 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(7) &gt; div &gt; button'.</msg>
+<status status="PASS" starttime="20200601 00:40:36.708" endtime="20200601 00:40:36.810"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:36.708" endtime="20200601 00:40:36.810"></status>
+</kw>
+<kw name="Verify Contact Information Clearing" library="User">
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${INPUT_FIELD_CITY}</arg>
+<arg>value</arg>
+<arg>n/a</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.820" level="INFO">Element 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(5) &gt; div &gt; input' attribute 'value' contains value 'n/a'.</msg>
+<status status="PASS" starttime="20200601 00:40:36.810" endtime="20200601 00:40:36.820"></status>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<arguments>
+<arg>${INPUT_FIELD_RESIDENTIAL_ADDRESS}</arg>
+<arg>value</arg>
+<arg>n/a</arg>
+</arguments>
+<msg timestamp="20200601 00:40:36.868" level="INFO">Element 'css=#casino-scroll-starting-point-2 &gt; div.panel-block.widget.dark-grey.no-top-margin.underline-style.with-tabs &gt; div.tabs-content.container &gt; div &gt; form &gt; div:nth-child(4) &gt; div:nth-child(4) &gt; div &gt; input' attribute 'value' contains value 'n/a'.</msg>
+<status status="PASS" starttime="20200601 00:40:36.820" endtime="20200601 00:40:36.868"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:36.810" endtime="20200601 00:40:36.868"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:32.945" endtime="20200601 00:40:36.868"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200601 00:40:36.870" endtime="20200601 00:40:39.285"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:36.869" endtime="20200601 00:40:39.285"></status>
+</kw>
+<doc>This is checking if the user can change City and Residential address in Contact information</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200601 00:40:25.181" endtime="20200601 00:40:39.286" critical="yes"></status>
+</test>
+<test id="s1-t3" name="User should be able to change communication settings">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:39.290" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200601 00:40:39.290" endtime="20200601 00:40:42.387"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:39.289" endtime="20200601 00:40:42.388"></status>
+</kw>
+<kw name="Log into user account page" library="OlybetApp">
+<kw name="Load" library="LoginPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:42.390" level="INFO">Opening url 'https://www.olybet.lt/user/profile'</msg>
+<status status="PASS" starttime="20200601 00:40:42.390" endtime="20200601 00:40:43.615"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:42.389" endtime="20200601 00:40:43.615"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LoginPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Login with username</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:43.615" endtime="20200601 00:40:44.149"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:43.615" endtime="20200601 00:40:44.149"></status>
+</kw>
+<kw name="Login" library="LoginPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>user_login_username</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:44.150" level="INFO">Typing text 'lauzhikas@gmail.com' into text field 'user_login_username'.</msg>
+<status status="PASS" starttime="20200601 00:40:44.150" endtime="20200601 00:40:45.008"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>user_login_password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:45.008" level="INFO">Typing password into text field 'user_login_password'.</msg>
+<msg timestamp="20200601 00:40:45.049" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200601 00:40:45.277" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200601 00:40:45.008" endtime="20200601 00:40:45.278"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:45.278" level="INFO">Clicking button 'css=#form-login &gt; div:nth-child(2) &gt; button'.</msg>
+<status status="PASS" starttime="20200601 00:40:45.278" endtime="20200601 00:40:45.362"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:44.149" endtime="20200601 00:40:45.363"></status>
+</kw>
+<kw name="Verify Page Loaded" library="User">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Contract № ${ACCOUNT}</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:45.363" endtime="20200601 00:40:47.067"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:45.363" endtime="20200601 00:40:47.068"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:42.389" endtime="20200601 00:40:47.068"></status>
+</kw>
+<kw name="Change Communication settings" library="OlybetApp">
+<kw name="Load" library="CommSettings">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Communication settings</arg>
+</arguments>
+<msg timestamp="20200601 00:40:47.070" level="INFO">Clicking link 'Communication settings'.</msg>
+<status status="PASS" starttime="20200601 00:40:47.070" endtime="20200601 00:40:47.638"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:47.069" endtime="20200601 00:40:47.639"></status>
+</kw>
+<kw name="Verify Page Loaded" library="CommSettings">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>News and promotions</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:47.640" endtime="20200601 00:40:48.176"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:47.639" endtime="20200601 00:40:48.176"></status>
+</kw>
+<kw name="Change Communication Settings" library="CommSettings">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${CHECKBOX1}</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:48.177" endtime="20200601 00:40:48.609"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CHECKBOX1}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:48.609" level="INFO">Clicking element 'xpath=/html/body/div[15]/div[2]/div[3]/div/div[1]/div[3]/div/div[1]/table/tbody/tr[1]/td[2]/div/label'.</msg>
+<status status="PASS" starttime="20200601 00:40:48.609" endtime="20200601 00:40:48.656"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CHECKBOX2}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:48.656" level="INFO">Clicking element 'xpath=/html/body/div[15]/div[2]/div[3]/div/div[1]/div[3]/div/div[1]/table/tbody/tr[2]/td[3]/div/label'.</msg>
+<status status="PASS" starttime="20200601 00:40:48.656" endtime="20200601 00:40:48.715"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CHECKBOX3}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:48.716" level="INFO">Clicking element 'xpath=/html/body/div[15]/div[2]/div[3]/div/div[1]/div[3]/div/div[1]/table/tbody/tr[3]/td[3]/div/label'.</msg>
+<status status="PASS" starttime="20200601 00:40:48.715" endtime="20200601 00:40:48.784"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:48.176" endtime="20200601 00:40:48.784"></status>
+</kw>
+<kw name="Save" library="CommSettings">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>Save</arg>
+</arguments>
+<msg timestamp="20200601 00:40:48.785" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20200601 00:40:48.785" endtime="20200601 00:40:49.004"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:48.784" endtime="20200601 00:40:49.004"></status>
+</kw>
+<kw name="Verify Save Successfull" library="CommSettings">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>css=#form-messages &gt; div &gt; i</arg>
+</arguments>
+<status status="PASS" starttime="20200601 00:40:49.005" endtime="20200601 00:40:49.219"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:49.005" endtime="20200601 00:40:49.219"></status>
+</kw>
+<kw name="Verify Changes" library="CommSettings">
+<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<arguments>
+<arg>${CHECKBOX1}</arg>
+</arguments>
+<msg timestamp="20200601 00:40:49.220" level="INFO">Verifying checkbox 'xpath=/html/body/div[15]/div[2]/div[3]/div/div[1]/div[3]/div/div[1]/table/tbody/tr[1]/td[2]/div/label' is selected.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200601 00:40:49.574" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200601 00:40:49.231" endtime="20200601 00:40:49.574"></status>
+</kw>
+<msg timestamp="20200601 00:40:49.575" level="FAIL">Checkbox with locator 'xpath=/html/body/div[15]/div[2]/div[3]/div/div[1]/div[3]/div/div[1]/table/tbody/tr[1]/td[2]/div/label' not found.</msg>
+<status status="FAIL" starttime="20200601 00:40:49.220" endtime="20200601 00:40:49.576"></status>
+</kw>
+<status status="FAIL" starttime="20200601 00:40:49.219" endtime="20200601 00:40:49.576"></status>
+</kw>
+<status status="FAIL" starttime="20200601 00:40:47.069" endtime="20200601 00:40:49.576"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200601 00:40:49.577" endtime="20200601 00:40:51.705"></status>
+</kw>
+<status status="PASS" starttime="20200601 00:40:49.576" endtime="20200601 00:40:51.705"></status>
+</kw>
+<doc>This is checking if the user can change the New and Promotions checkbox item options</doc>
+<tags>
+<tag>Current</tag>
+</tags>
+<status status="FAIL" starttime="20200601 00:40:39.288" endtime="20200601 00:40:51.706" critical="yes">Checkbox with locator 'xpath=/html/body/div[15]/div[2]/div[3]/div/div[1]/div[3]/div/div[1]/table/tbody/tr[1]/td[2]/div/label' not found.</status>
+</test>
+<doc>Testing 'My Profile' Section</doc>
+<status status="FAIL" starttime="20200601 00:40:15.227" endtime="20200601 00:40:51.710"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Current</stat>
+<stat pass="2" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" id="s1" name="Olybet">Olybet</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
